@@ -12,4 +12,9 @@ public class URLController {
 	public String storeURL(@RequestParam(value="url",defaultValue=" ") String url) {
 		return URLService.storeUrl(url);
 	}
+	
+	@GetMapping("/geturl")
+	public String getKey(@RequestParam(value="url",defaultValue=" ") String url) {
+		return URLService.getUrlKey(url);
+	}
 }

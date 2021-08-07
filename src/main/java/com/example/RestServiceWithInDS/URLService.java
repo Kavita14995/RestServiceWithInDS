@@ -27,6 +27,19 @@ public class URLService {
 		}
 	}
 	
+	public static String getUrlKey(String url) {
+		if(urlMap.containsKey(url.toLowerCase()) ) {
+			countMap.put(urlMap.get(url.toLowerCase()),urlMap.get(url.toLowerCase())+1);
+			return urlMap.get(url).toString();
+		}
+		else if(!url.equals(" ")){
+			return "URL not available";
+		}
+		else {
+			return "Please enter url to get key";
+		}
+	}
+	
 	
 	
 }
